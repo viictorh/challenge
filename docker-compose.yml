@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: hyperativa_bd
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hyperativa
+      MYSQL_USER: victor
+      MYSQL_PASSWORD: victor
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-setup.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - hyper_network
+
+networks:
+  hyper_network:
+    driver: bridge
