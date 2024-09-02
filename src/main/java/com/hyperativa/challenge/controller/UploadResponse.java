@@ -1,8 +1,10 @@
 package com.hyperativa.challenge.controller;
 
-public record UploadResponse(String message) {
+import java.util.Set;
 
-	public static UploadResponse success() {
-		return new UploadResponse("Upload realizado com sucesso");
-	}
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+public record UploadResponse(@JsonInclude(JsonInclude.Include.NON_NULL) Set<String> invalidBatch,
+		@JsonInclude(JsonInclude.Include.NON_NULL) Set<String> repeatedCards, int totalBatches, int totalSavedCards) {
+
 }

@@ -49,8 +49,7 @@ public class CreditcardController {
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ResponseStatus(HttpStatus.CREATED)
 	public UploadResponse saveFile(InputStream inputStream) throws IOException, ServletException {
-		creditcardService.saveFromFile(inputStream);
-		return UploadResponse.success();
+		return creditcardService.saveFromFile(inputStream);
 	}
 
 }
