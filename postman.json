@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "0196171a-8b7f-4be4-a8e9-d3a99826c0e3",
+		"name": "Hyperativa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6882060"
+	},
+	"item": [
+		{
+			"name": "find",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjUxOTY1MDMsImV4cCI6MTcyNTI4MjkwMywiaWQiOjIsImxvZ2luIjoidXNlciIsInByb2ZpbGUiOlt7ImF1dGhvcml0eSI6IlJPTEVfVVNFUiJ9XX0.RkpimJKcpp21Qi6bID-oxrMQ0jOEJPa8YayEjuZ-4_8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/creditcard/find?creditcard=10000000000000278",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditcard",
+						"find"
+					],
+					"query": [
+						{
+							"key": "creditcard",
+							"value": "10000000000000278"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fileupload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjUxNTgwMjMsImV4cCI6MTcyNTI0NDQyMywiaWQiOjEsImxvZ2luIjoiYWRtaW4iLCJwcm9maWxlIjpbeyJhdXRob3JpdHkiOiJhZG1pbiJ9XX0.lPBALwvPbv0TAYnPGtA7aRe_fC5I__Dd5LkNoXohm70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/victor/Downloads/DESAFIO-HYPERATIVA.txt"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/creditcard/file-upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditcard",
+						"file-upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjUxOTY1NzIsImV4cCI6MTcyNTI4Mjk3MiwiaWQiOjEsImxvZ2luIjoiYWRtaW4iLCJwcm9maWxlIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn1dfQ.hSTYEt6deOwW_Xr1j4jqaml82QsnIR-Uf_0Me4KaJmE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\":\"12345677\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/creditcard/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditcard",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"user\",\r\n    \"name\":\"Usuário\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -11,6 +11,7 @@ import com.hyperativa.challenge.dto.SignupDTO;
 import com.hyperativa.challenge.dto.SignupResponse;
 import com.hyperativa.challenge.service.AuthenticationService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -21,12 +22,12 @@ public class AuthController {
 	private final AuthenticationService authenticationService;
 
 	@PostMapping("/login")
-	public LoginResponse login(@RequestBody LoginDTO loginDTO) {
+	public LoginResponse login(@Valid @RequestBody LoginDTO loginDTO) {
 		return authenticationService.authenticate(loginDTO);
 	}
 
 	@PostMapping("/signup")
-	public SignupResponse singup(@RequestBody SignupDTO signupDTO) {
+	public SignupResponse singup(@Valid @RequestBody SignupDTO signupDTO) {
 		return authenticationService.signup(signupDTO);
 	}
 }
