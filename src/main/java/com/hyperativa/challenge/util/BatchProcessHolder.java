@@ -3,7 +3,7 @@ package com.hyperativa.challenge.util;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.hyperativa.challenge.controller.UploadResponse;
+import com.hyperativa.challenge.dto.UploadResponse;
 import com.hyperativa.challenge.entity.Batch;
 
 public class BatchProcessHolder {

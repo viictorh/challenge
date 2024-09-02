@@ -73,7 +73,8 @@ public class LineProcessor {
 		batchHolder.addTotalCards();
 	}
 
-	private String protectedCardNumber(String cardNumber) {
+	// Visiblidade default para fins de teste
+	String protectedCardNumber(String cardNumber) {
 		int lengthToMask = cardNumber.length() - 4;
 		String maskedPart = "*".repeat(lengthToMask);
 		String visiblePart = cardNumber.substring(lengthToMask);

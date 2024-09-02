@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hyperativa.challenge.dto.CreditcardDTO;
 import com.hyperativa.challenge.dto.CreditcardResponse;
+import com.hyperativa.challenge.dto.UploadResponse;
 import com.hyperativa.challenge.entity.Creditcard;
 import com.hyperativa.challenge.service.CreditcardService;
 

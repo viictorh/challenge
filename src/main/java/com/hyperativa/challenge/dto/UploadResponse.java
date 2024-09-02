@@ -1,4 +1,4 @@
-package com.hyperativa.challenge.controller;
+package com.hyperativa.challenge.dto;
 
 import java.util.Set;
 
